@@ -1,16 +1,16 @@
 
-%define		_state		unstable
+%define		_state		stable
 %define		origname	kdeaccessibility
 
 Summary:	Accessibility support for KDE
 Summary(pl.UTF-8):	Ułatwienia dostępu dla KDE
 Name:		kde4-kdeaccessibility
-Version:	4.0.98
+Version:	4.1.0
 Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{origname}-%{version}.tar.bz2
-# Source0-md5:	853044d27a1645ae1f995c2ced7eb237
+# Source0-md5:	7d53001b2db8d7d8bd82a63e8be882ae
 URL:		http://www.kde.org/
 BuildRequires:	alsa-lib-devel
 BuildRequires:	kde4-kdelibs-devel >= %{version}
@@ -46,6 +46,18 @@ KDE Icons Theme - mono.
 
 %description -n kde-icons-mono -l pl.UTF-8
 Motyw ikon dla KDE - mono.
+
+%package -n kde-icons-actions
+Summary:        KDE Icons Theme - actions
+Summary(pl.UTF-8):      Motyw ikon dla KDE - actions
+Group:          X11/Amusements
+Requires:       kde4-kdelibs >= %{version}
+
+%description -n kde-icons-actions
+KDE Icons Theme - actions.
+
+%description -n kde-icons-actions -l pl.UTF-8
+Motyw ikon dla KDE - actions.
 
 %package kmag
 Summary:	A KDE magnifying tool
@@ -178,6 +190,10 @@ rm -rf $RPM_BUILD_ROOT
 %exclude %{_iconsdir}/mono/*/apps/kmag.*
 %exclude %{_iconsdir}/mono/*/apps/kmousetool.*
 %exclude %{_iconsdir}/mono/*/apps/kmouth.*
+
+%files -n kde-icons-actions
+%defattr(644,root,root,755)
+%{_iconsdir}/hicolor/*/actions
 
 %files kmag -f kmag.lang
 %defattr(644,root,root,755)
