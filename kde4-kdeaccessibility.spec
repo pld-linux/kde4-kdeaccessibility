@@ -6,7 +6,7 @@ Summary:	Accessibility support for KDE
 Summary(pl.UTF-8):	Ułatwienia dostępu dla KDE
 Name:		kde4-kdeaccessibility
 Version:	4.2.3
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{origname}-%{version}.tar.bz2
@@ -63,7 +63,7 @@ Motyw ikon dla KDE - actions.
 Summary:	A KDE magnifying tool
 Summary(pl.UTF-8):	Lupa dla środowiska KDE
 Group:		X11/Applications
-Requires:	kde4-kdebase-core >= %{version}
+Requires:	kde4-kdebase >= %{version}
 
 %description kmag
 A KDE magnifying tool.
@@ -75,7 +75,7 @@ Lupa dla środowiska KDE.
 Summary:	KMouseTool - a program that clicks the mouse for you
 Summary(pl.UTF-8):	KMouseTool - narzędzie do klikania myszką bez naciskania jej przycisków
 Group:		X11/Applications
-Requires:	kde4-kdebase-core >= %{version}
+Requires:	kde4-kdebase >= %{version}
 
 %description kmousetool
 KMouseTool is a program that clicks the mouse for you. KMouseTool
@@ -96,7 +96,7 @@ pewnej praktyki.
 Summary:	A frontend for speech synthesizers
 Summary(pl.UTF-8):	Frontend do syntezatorów mowy
 Group:		X11/Applications
-Requires:	kde4-kdebase-core >= %{version}
+Requires:	kde4-kdebase >= %{version}
 
 %description kmouth
 KMouth is a frontend for speech synthesizers. It is a program that
