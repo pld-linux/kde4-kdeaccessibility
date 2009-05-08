@@ -13,6 +13,7 @@ Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{origname}-%{versio
 # Source0-md5:	d371973283e3b7843c9f8489e05269b2
 URL:		http://www.kde.org/
 BuildRequires:	alsa-lib-devel
+BuildRequires:	cmake >= 2.6.3
 BuildRequires:	kde4-kdelibs-devel >= %{version}
 BuildRequires:	rpmbuild(macros) >= 1.129
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
