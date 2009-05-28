@@ -5,12 +5,12 @@
 Summary:	Accessibility support for KDE
 Summary(pl.UTF-8):	Ułatwienia dostępu dla KDE
 Name:		kde4-kdeaccessibility
-Version:	4.2.3
-Release:	4
+Version:	4.2.4
+Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{origname}-%{version}.tar.bz2
-# Source0-md5:	d371973283e3b7843c9f8489e05269b2
+# Source0-md5:	602fe3667cdbbf89e7803a2baaa902c4
 URL:		http://www.kde.org/
 BuildRequires:	alsa-lib-devel
 BuildRequires:	cmake >= 2.6.3
@@ -35,6 +35,18 @@ Accessibility support for KDE - header files.
 
 %description devel -l pl.UTF-8
 Ułatwienia dostępu dla KDE - pliki nagłówkowe.
+
+%package -n kde4-color-schemes
+Summary:	KDE Color Schemes
+Summary(pl.UTF-8):	Motywy kolorów dla KDE
+Group:		X11/Amusements
+Requires:	kde4-kdelibs >= %{version}
+
+%description -n kde4-color-schemes
+KDE Color Schemes.
+
+%description -n kde4-color-schemes -l pl.UTF-8
+Motyw kolorów dla KDE.
 
 %package -n kde-icons-mono
 Summary:	KDE Icons Theme - mono
@@ -181,6 +193,11 @@ rm -rf $RPM_BUILD_ROOT
 
 %post	kttsd	-p /sbin/ldconfig
 %postun	kttsd	-p /sbin/ldconfig
+
+%files -n kde4-color-schemes
+%defattr(644,root,root,755)
+%{_datadir}/apps/color-schemes/Zion.colors
+%{_datadir}/apps/color-schemes/ZionReversed.colors
 
 %files devel
 %defattr(644,root,root,755)
