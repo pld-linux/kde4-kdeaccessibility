@@ -36,16 +36,16 @@ Accessibility support for KDE - header files.
 %description devel -l pl.UTF-8
 Ułatwienia dostępu dla KDE - pliki nagłówkowe.
 
-%package -n kde4-color-schemes
+%package ColorSchemes
 Summary:	KDE Color Schemes
 Summary(pl.UTF-8):	Motywy kolorów dla KDE
 Group:		X11/Amusements
 Requires:	kde4-kdelibs >= %{version}
 
-%description -n kde4-color-schemes
+%description ColorSchemes
 KDE Color Schemes.
 
-%description -n kde4-color-schemes -l pl.UTF-8
+%description ColorSchemes -l pl.UTF-8
 Motyw kolorów dla KDE.
 
 %package -n kde-icons-mono
@@ -194,7 +194,7 @@ rm -rf $RPM_BUILD_ROOT
 %post	kttsd	-p /sbin/ldconfig
 %postun	kttsd	-p /sbin/ldconfig
 
-%files -n kde4-color-schemes
+%files ColorSchemes
 %defattr(644,root,root,755)
 %{_datadir}/apps/color-schemes/Zion.colors
 %{_datadir}/apps/color-schemes/ZionReversed.colors
