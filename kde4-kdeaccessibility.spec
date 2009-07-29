@@ -5,12 +5,12 @@
 Summary:	Accessibility support for KDE
 Summary(pl.UTF-8):	Ułatwienia dostępu dla KDE
 Name:		kde4-kdeaccessibility
-Version:	4.2.98
+Version:	4.3.0
 Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{origname}-%{version}.tar.bz2
-# Source0-md5:	5afe49a97ced26b4b0be440b96dd7599
+# Source0-md5:	76435ce1bf787713effe079a3664d3cd
 URL:		http://www.kde.org/
 BuildRequires:	alsa-lib-devel
 BuildRequires:	cmake >= 2.6.3
