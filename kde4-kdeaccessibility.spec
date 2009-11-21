@@ -212,7 +212,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -n kde-icons-actions
 %defattr(644,root,root,755)
-%{_iconsdir}/hicolor/*/actions
+%{_iconsdir}/hicolor/*/actions/*
 
 %files kmag -f kmag.lang
 %defattr(644,root,root,755)
