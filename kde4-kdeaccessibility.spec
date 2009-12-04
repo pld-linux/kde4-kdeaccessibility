@@ -12,9 +12,16 @@ Group:		X11/Applications
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{origname}-%{version}.tar.bz2
 # Source0-md5:	00adeff7e2441fdc7959644cefb07967
 URL:		http://www.kde.org/
+BuildRequires:	Qt3Support-devel
+BuildRequires:	QtSvg-devel
+BuildRequires:	alsa-lib-devel
+BuildRequires:	automoc4
 BuildRequires:	cmake >= 2.6.3
 BuildRequires:	kde4-kdelibs-devel >= %{version}
+BuildRequires:	qt4-build
+BuildRequires:	qt4-qmake
 BuildRequires:	rpmbuild(macros) >= 1.129
+BuildRequires:	xorg-lib-libXtst-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -60,10 +67,10 @@ KDE Icons Theme - mono.
 Motyw ikon dla KDE - mono.
 
 %package -n kde-icons-actions
-Summary:        KDE Icons Theme - actions
-Summary(pl.UTF-8):      Motyw ikon dla KDE - actions
-Group:          X11/Amusements
-Requires:       kde4-kdelibs >= %{version}
+Summary:	KDE Icons Theme - actions
+Summary(pl.UTF-8):	Motyw ikon dla KDE - actions
+Group:		X11/Amusements
+Requires:	kde4-kdelibs >= %{version}
 
 %description -n kde-icons-actions
 KDE Icons Theme - actions.
