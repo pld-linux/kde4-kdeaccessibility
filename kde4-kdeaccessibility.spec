@@ -1,7 +1,7 @@
 
 %define		_state		unstable
 %define		origname	kdeaccessibility
-%define		qtver		4.6.0
+%define		qtver		4.6.1
 
 Summary:	Accessibility support for KDE
 Summary(pl.UTF-8):	Ułatwienia dostępu dla KDE
