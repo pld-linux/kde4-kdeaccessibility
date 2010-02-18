@@ -1,26 +1,28 @@
 
 %define		_state		stable
 %define		origname	kdeaccessibility
+%define		qtver		4.6.1
 
 Summary:	Accessibility support for KDE
 Summary(pl.UTF-8):	Ułatwienia dostępu dla KDE
 Name:		kde4-kdeaccessibility
-Version:	4.3.5
+Version:	4.4.0
 Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{origname}-%{version}.tar.bz2
-# Source0-md5:	043eed522a3d88c4b730aa491834445a
+# Source0-md5:	ef786373f2b83070cd100c0414cf669b
 URL:		http://www.kde.org/
-BuildRequires:	Qt3Support-devel
-BuildRequires:	QtSvg-devel
+BuildRequires:	Qt3Support-devel >= %{qtver}
+BuildRequires:	QtSvg-devel >= %{qtver}
 BuildRequires:	alsa-lib-devel
 BuildRequires:	automoc4
-BuildRequires:	cmake >= 2.6.3
+BuildRequires:	cmake >= 2.8.0
 BuildRequires:	kde4-kdelibs-devel >= %{version}
-BuildRequires:	qt4-build
-BuildRequires:	qt4-qmake
+BuildRequires:	qt4-build >= %{qtver}
+BuildRequires:	qt4-qmake >= %{qtver}
 BuildRequires:	rpmbuild(macros) >= 1.129
+BuildRequires:	speech-dispatcher-devel >= 0.6.6
 BuildRequires:	xorg-lib-libXtst-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -251,19 +253,9 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/kttsd
 %attr(755,root,root) %{_bindir}/kttsmgr
 %attr(755,root,root) %{_libdir}/kde4/kcm_kttsd.so
-%attr(755,root,root) %{_libdir}/kde4/libkttsd_alsaplugin.so
-%attr(755,root,root) %{_libdir}/kde4/libkttsd_commandplugin.so
-%attr(755,root,root) %{_libdir}/kde4/libkttsd_eposplugin.so
-%attr(755,root,root) %{_libdir}/kde4/libkttsd_festivalintplugin.so
-%attr(755,root,root) %{_libdir}/kde4/libkttsd_fliteplugin.so
-%attr(755,root,root) %{_libdir}/kde4/libkttsd_freettsplugin.so
-%attr(755,root,root) %{_libdir}/kde4/libkttsd_hadifixplugin.so
-%attr(755,root,root) %{_libdir}/kde4/libkttsd_phononplugin.so
-%attr(755,root,root) %{_libdir}/kde4/libkttsd_sbdplugin.so
 %attr(755,root,root) %{_libdir}/kde4/libkttsd_stringreplacerplugin.so
 %attr(755,root,root) %{_libdir}/kde4/libkttsd_talkerchooserplugin.so
 %attr(755,root,root) %{_libdir}/kde4/libkttsd_xmltransformerplugin.so
-%attr(755,root,root) %{_libdir}/kde4/libkttsjobmgrpart.so
 %attr(755,root,root) %ghost %{_libdir}/libkttsd.so.?
 %attr(755,root,root) %{_libdir}/libkttsd.so.*.*.*
 %{_desktopdir}/kde4/kttsmgr.desktop
