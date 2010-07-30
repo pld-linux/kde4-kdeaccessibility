@@ -6,12 +6,12 @@
 Summary:	Accessibility support for KDE
 Summary(pl.UTF-8):	Ułatwienia dostępu dla KDE
 Name:		kde4-kdeaccessibility
-Version:	4.4.5
+Version:	4.5.0
 Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{origname}-%{version}.tar.bz2
-# Source0-md5:	c8034d8475185faad52556ab61c55c56
+# Source0-md5:	bbbf9d87e02e27f1f7ce1464aab48c42
 URL:		http://www.kde.org/
 BuildRequires:	Qt3Support-devel >= %{qtver}
 BuildRequires:	QtSvg-devel >= %{qtver}
@@ -167,6 +167,17 @@ KTTS GStreamer plugin.
 %description kttsd-gstreamer -l pl.UTF-8
 Wtyczka Gstreamer dla KTTS.
 
+%package jovie
+Summary:	Jovie
+Summary(pl.UTF-8):	Jovie
+Group:		X11/Applications
+
+%description jovie
+Jovie.
+
+%description jovie -l pl.UTF-8
+Jovie.
+
 %prep
 %setup -q -n %{origname}-%{version}
 
@@ -194,7 +205,6 @@ rm -rf $RPM_BUILD_ROOT
 %find_lang kmag		--with-kde
 %find_lang kmousetool	--with-kde
 %find_lang kmouth	--with-kde
-%find_lang kttsd	--with-kde
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -247,21 +257,21 @@ rm -rf $RPM_BUILD_ROOT
 %{_iconsdir}/*/*/apps/kmouth.*
 %{_mandir}/man1/kmouth.1.*
 
-%files kttsd -f kttsd.lang
+%files kttsd
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_bindir}/kttsd
-%attr(755,root,root) %{_bindir}/kttsmgr
+#%attr(755,root,root) %{_bindir}/kttsd
+#%attr(755,root,root) %{_bindir}/kttsmgr
 %attr(755,root,root) %{_libdir}/kde4/kcm_kttsd.so
-%attr(755,root,root) %{_libdir}/kde4/libkttsd_stringreplacerplugin.so
-%attr(755,root,root) %{_libdir}/kde4/libkttsd_talkerchooserplugin.so
-%attr(755,root,root) %{_libdir}/kde4/libkttsd_xmltransformerplugin.so
+#%attr(755,root,root) %{_libdir}/kde4/libkttsd_stringreplacerplugin.so
+#%attr(755,root,root) %{_libdir}/kde4/libkttsd_talkerchooserplugin.so
+#%attr(755,root,root) %{_libdir}/kde4/libkttsd_xmltransformerplugin.so
 %attr(755,root,root) %ghost %{_libdir}/libkttsd.so.?
 %attr(755,root,root) %{_libdir}/libkttsd.so.*.*.*
-%{_desktopdir}/kde4/kttsmgr.desktop
+#%{_desktopdir}/kde4/kttsmgr.desktop
 %{_datadir}/apps/kttsd
 %{_datadir}/kde4/services/kcmkttsd.desktop
 %{_datadir}/kde4/services/ktts*.desktop
-%{_datadir}/kde4/servicetypes/ktts*.desktop
+#%{_datadir}/kde4/servicetypes/ktts*.desktop
 %{_iconsdir}/*/*/*/female.*
 %{_iconsdir}/*/*/*/male.*
 %{_iconsdir}/*/*/*/*speak.png
@@ -271,3 +281,17 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/kde4/libkttsd_gstplugin.so
 %endif
+
+%files jovie
+%defattr(644,root,root,755)
+%attr(755,root,root) %{_bindir}/jovie
+%attr(755,root,root) %{_libdir}/kde4/libjovie_stringreplacerplugin.so
+%attr(755,root,root) %{_libdir}/kde4/libjovie_talkerchooserplugin.so
+%attr(755,root,root) %{_libdir}/kde4/libjovie_xmltransformerplugin.so
+%{_datadir}/apps/jovie
+%{_datadir}/kde4/services/jovie.desktop
+%{_datadir}/kde4/services/jovie_stringreplacerplugin.desktop
+%{_datadir}/kde4/services/jovie_talkerchooserplugin.desktop
+%{_datadir}/kde4/services/jovie_xmltransformerplugin.desktop
+%{_datadir}/kde4/servicetypes/jovie_filterplugin.desktop
+%{_kdedocdir}/en/jovie
