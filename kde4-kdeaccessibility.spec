@@ -285,9 +285,9 @@ rm -rf $RPM_BUILD_ROOT
 %files jovie
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/jovie
-%attr(755,root,root) %{_libdir}/kde4/libjovie_stringreplacerplugin.so
-%attr(755,root,root) %{_libdir}/kde4/libjovie_talkerchooserplugin.so
-%attr(755,root,root) %{_libdir}/kde4/libjovie_xmltransformerplugin.so
+%attr(755,root,root) %{_libdir}/kde4/jovie_stringreplacerplugin.so
+%attr(755,root,root) %{_libdir}/kde4/jovie_talkerchooserplugin.so
+%attr(755,root,root) %{_libdir}/kde4/jovie_xmltransformerplugin.so
 %{_datadir}/apps/jovie
 %{_datadir}/kde4/services/jovie.desktop
 %{_datadir}/kde4/services/jovie_stringreplacerplugin.desktop
