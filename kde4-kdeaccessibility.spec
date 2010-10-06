@@ -7,7 +7,7 @@ Summary:	Accessibility support for KDE
 Summary(pl.UTF-8):	Ułatwienia dostępu dla KDE
 Name:		kde4-kdeaccessibility
 Version:	4.5.2
-Release:	0.1
+Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{origname}-%{version}.tar.bz2
