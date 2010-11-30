@@ -7,11 +7,11 @@ Summary:	Accessibility support for KDE
 Summary(pl.UTF-8):	Ułatwienia dostępu dla KDE
 Name:		kde4-kdeaccessibility
 Version:	4.5.4
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{origname}-%{version}.tar.bz2
-# Source0-md5:	f0bd1dfbd6af7b4380ffdabb0db20468
+# Source0-md5:	0133be1c4f26ff0661283ea0245542c3
 URL:		http://www.kde.org/
 BuildRequires:	Qt3Support-devel >= %{qtver}
 BuildRequires:	QtSvg-devel >= %{qtver}
