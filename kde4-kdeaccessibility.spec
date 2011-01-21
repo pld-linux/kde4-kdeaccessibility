@@ -6,12 +6,12 @@
 Summary:	Accessibility support for KDE
 Summary(pl.UTF-8):	Ułatwienia dostępu dla KDE
 Name:		kde4-kdeaccessibility
-Version:	4.5.5
+Version:	4.6.0
 Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{origname}-%{version}.tar.bz2
-# Source0-md5:	3be1c8f3291205e350006734600767e4
+# Source0-md5:	95bfb46141365d7330adfacd952584e9
 URL:		http://www.kde.org/
 BuildRequires:	Qt3Support-devel >= %{qtver}
 BuildRequires:	QtSvg-devel >= %{qtver}
@@ -237,10 +237,14 @@ rm -rf $RPM_BUILD_ROOT
 %files kmousetool -f kmousetool.lang
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/kmousetool
+%attr(755,root,root) %{_libdir}/kde4/libexec/kaccessibleapp
+%dir %{_libdir}/kde4/plugins/accessiblebridge
+%attr(755,root,root) %{_libdir}/kde4/plugins/accessiblebridge/kaccessiblebridge.so
 %{_datadir}/apps/kmousetool
 %{_desktopdir}/kde4/kmousetool.desktop
 %{_iconsdir}/*/*/apps/kmousetool.*
 %{_mandir}/man1/kmousetool.1.*
+%{_datadir}/dbus-1/services/org.kde.kaccessible.service
 
 %files kmouth -f kmouth.lang
 %defattr(644,root,root,755)
@@ -288,4 +292,5 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kde4/services/jovie_talkerchooserplugin.desktop
 %{_datadir}/kde4/services/jovie_xmltransformerplugin.desktop
 %{_datadir}/kde4/servicetypes/jovie_filterplugin.desktop
+%{_desktopdir}/kde4/jovieapp.desktop
 %{_kdedocdir}/en/jovie
