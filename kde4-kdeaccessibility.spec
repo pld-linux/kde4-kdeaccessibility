@@ -1,17 +1,17 @@
 
 %define		_state		stable
 %define		origname	kdeaccessibility
-%define		qtver		4.7.1
+%define		qtver		4.7.2
 
 Summary:	Accessibility support for KDE
 Summary(pl.UTF-8):	Ułatwienia dostępu dla KDE
 Name:		kde4-kdeaccessibility
-Version:	4.6.0
+Version:	4.6.1
 Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{origname}-%{version}.tar.bz2
-# Source0-md5:	95bfb46141365d7330adfacd952584e9
+# Source0-md5:	60cb5a87c210721155019d0ef334f8f5
 URL:		http://www.kde.org/
 BuildRequires:	Qt3Support-devel >= %{qtver}
 BuildRequires:	QtSvg-devel >= %{qtver}
