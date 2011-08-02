@@ -6,12 +6,12 @@
 Summary:	Accessibility support for KDE
 Summary(pl.UTF-8):	Ułatwienia dostępu dla KDE
 Name:		kde4-kdeaccessibility
-Version:	4.6.5
-Release:	1
+Version:	4.7.0
+Release:	0.1
 License:	GPL
 Group:		X11/Applications
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{origname}-%{version}.tar.bz2
-# Source0-md5:	f604fb4ae9a368d8b4ff0aeab0cfa52e
+# Source0-md5:	86bd48f3b775291df1551ddf784ec993
 URL:		http://www.kde.org/
 BuildRequires:	Qt3Support-devel >= %{qtver}
 BuildRequires:	QtSvg-devel >= %{qtver}
@@ -42,30 +42,6 @@ Accessibility support for KDE - header files.
 
 %description devel -l pl.UTF-8
 Ułatwienia dostępu dla KDE - pliki nagłówkowe.
-
-%package ColorSchemes
-Summary:	KDE Color Schemes
-Summary(pl.UTF-8):	Motywy kolorów dla KDE
-Group:		X11/Amusements
-Requires:	kde4-kdelibs >= %{version}
-
-%description ColorSchemes
-KDE Color Schemes.
-
-%description ColorSchemes -l pl.UTF-8
-Motyw kolorów dla KDE.
-
-%package -n kde-icons-mono
-Summary:	KDE Icons Theme - mono
-Summary(pl.UTF-8):	Motyw ikon dla KDE - mono
-Group:		X11/Amusements
-Requires:	kde4-kdelibs >= %{version}
-
-%description -n kde-icons-mono
-KDE Icons Theme - mono.
-
-%description -n kde-icons-mono -l pl.UTF-8
-Motyw ikon dla KDE - mono.
 
 %package -n kde-icons-actions
 Summary:	KDE Icons Theme - actions
@@ -206,21 +182,9 @@ rm -rf $RPM_BUILD_ROOT
 %post	kttsd	-p /sbin/ldconfig
 %postun	kttsd	-p /sbin/ldconfig
 
-%files ColorSchemes
-%defattr(644,root,root,755)
-%{_datadir}/apps/color-schemes/Zion.colors
-%{_datadir}/apps/color-schemes/ZionReversed.colors
-
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libkttsd.so
-
-%files -n kde-icons-mono
-%defattr(644,root,root,755)
-%{_iconsdir}/mono
-%exclude %{_iconsdir}/mono/*/apps/kmag.*
-%exclude %{_iconsdir}/mono/*/apps/kmousetool.*
-%exclude %{_iconsdir}/mono/*/apps/kmouth.*
 
 %files -n kde-icons-actions
 %defattr(644,root,root,755)
